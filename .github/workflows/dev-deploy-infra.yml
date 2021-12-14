@@ -26,4 +26,6 @@ jobs:
       with:
         azcliversion: 2.30.0
         inlineScript: |
+          ls
+          ls $GITHUB_WORKSPACE
           az deployment sub create -f $GITHUB_WORKSPACE/infra/dev/ha-func-dev.bicep -w -l eastus
