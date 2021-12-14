@@ -3,6 +3,7 @@ targetScope = 'subscription'
 resource funcrg 'Microsoft.Resources/resourceGroups@2021-04-01' = {
   name: 'lphafunctestdev'
   location: 'eastus'
+  
 }
 
 
