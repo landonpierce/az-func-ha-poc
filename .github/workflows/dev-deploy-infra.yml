@@ -37,6 +37,7 @@ jobs:
   infra-deploy:
     runs-on: ubuntu-latest
     environment: azure-airs-gated
+    needs: infra-deploy-what-if
     steps:
 
     - name: 'Checkout GitHub Action'

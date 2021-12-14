@@ -21,7 +21,7 @@ module hafuncdeveus '../modules/azure_function.bicep' = {
   scope: funcrgeus
   name: 'ha-func-dev-eus'
   params: {
-    appName: 'lphafunctestdev'
+    appName: 'lphafunctestdeveus'
   }
 
 }
@@ -29,7 +29,7 @@ module hafuncdevwus '../modules/azure_function.bicep' = {
   scope: funcrgwus
   name: 'ha-func-dev-wus'
   params: {
-    appName: 'lphafunctestdev'
+    appName: 'lphafunctestdevwus'
   }
 
 }
@@ -37,7 +37,7 @@ module hafuncdevweu '../modules/azure_function.bicep' = {
   scope: funcrgweu
   name: 'ha-func-dev-weu'
   params: {
-    appName: 'lphafunctestdev'
+    appName: 'lphafunctestdevweu'
   }
 
 }
