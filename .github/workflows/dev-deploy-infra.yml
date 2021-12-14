@@ -34,3 +34,24 @@ jobs:
           ls
           ls $GITHUB_WORKSPACE
           az deployment sub create -f $GITHUB_WORKSPACE/infra/dev/ha-func-dev.bicep -w -l eastus
+  infra-deploy:
+    runs-on: ubuntu-latest
+    environment: azure-airs-gated
+    steps:
+
+    - name: 'Checkout GitHub Action'
+      uses: actions/checkout@master
+
+    - name: Azure Login
+      uses: azure/login@v1
+      with:
+        creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+    - name: Azure CLI script
+      uses: azure/CLI@v1
+      with:
+        azcliversion: 2.30.0
+        inlineScript: |
+          ls
+          ls $GITHUB_WORKSPACE
+          az deployment sub create -f $GITHUB_WORKSPACE/infra/dev/ha-func-dev.bicep -l eastus
