@@ -1,11 +1,13 @@
 # File: .github/workflows/workflow.yml
 
 on:
+  workflow_dispatch:
   push:
     branches:
       - main
     paths:
       - "infra/**"
+      - ".github/workflows"
 
 name: Deploy Infrastructure
 
